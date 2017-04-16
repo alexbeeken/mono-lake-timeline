@@ -66,7 +66,7 @@ class BirdCounts extends Component {
                   animation={true}>
                   <HorizontalGridLines />
                   {this.buildBarSeries()}
-                  <XAxis title='count'/>
+                  <XAxis />
                   <YAxis title='species'
                     tickFormat={this.tickFormatter}
                     tickSizeOuter={0.5}

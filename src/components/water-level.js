@@ -85,8 +85,8 @@ class WaterLevel extends Component {
               animation={true}>
               <HorizontalGridLines />
               {this.buildLineSeries()}
-              <XAxis title="months" tickFormat={this.tickFormatter}/>
-              <YAxis title="lake level"/>
+              <XAxis tickFormat={this.tickFormatter}/>
+              <YAxis title="feet"/>
             </XYPlot>
         </div>
       );

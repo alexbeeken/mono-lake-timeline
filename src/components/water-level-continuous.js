@@ -60,11 +60,10 @@ class WaterLevelContinuous extends Component {
             <HorizontalGridLines />
             {this.buildLineSeries()}
             <XAxis
-              title="years"
               tickFormat={this.tickFormatter}
               tickTotal={this.tickNumber()}
             />
-            <YAxis title="lake level"/>
+            <YAxis title="feet"/>
           </XYPlot>
         </div>);
   }
