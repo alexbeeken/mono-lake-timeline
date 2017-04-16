@@ -50,7 +50,7 @@ class Control extends Component {
     let marks = {}
     let years = this.fillInYearsArray(this.yearsRanges([0, 75]))
     for (var i = 1; i <= years.length; i++) {
-      if (years[i] % 5 === 0) {
+      if (years[i] % 10 === 0) {
         marks[i.toString()] = {
           'label': years[i].toString(),
         }
