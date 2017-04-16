@@ -54,9 +54,9 @@ class WaterLevelContinuous extends Component {
         <div className='data-box'>
           <h4>Water Level Continuous</h4>
           <XYPlot
-            width={600}
+            width={this.props.width}
             yDomain={[6371, 6420]}
-            height={300}>
+            height={this.props.height}>
             <HorizontalGridLines />
             {this.buildLineSeries()}
             <XAxis

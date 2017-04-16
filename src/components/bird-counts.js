@@ -58,9 +58,9 @@ class BirdCounts extends Component {
               <h4>Bird Counts</h4>
               <div className='birds'>
                 <XYPlot
-                  width={600}
+                  width={this.props.width}
                   xDomain={[0, 2400]}
-                  height={700}
+                  height={this.props.height}
                   onMouseEnter={this.active}
                   onMouseLeave={this.inactive}
                   animation={true}>

@@ -78,8 +78,8 @@ class WaterLevel extends Component {
         <div className='data-box'>
           <h4>Water Level by Month</h4>
            <XYPlot
-              width={660}
-              height={300}
+              width={this.props.width}
+              height={this.props.height}
               onMouseEnter={this.active}
               onMouseLeave={this.inactive}
               animation={true}>
