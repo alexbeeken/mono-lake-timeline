@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Range } from 'rc-slider';
-// import DataBoxes from './data-boxes.jsx'
+import DataBoxes from './data-boxes.js'
 import library from '../data/years.js'
 
 class Control extends Component {
@@ -68,6 +68,9 @@ class Control extends Component {
         </div>
       </div>
       <div className='data-boxes'>
+        <DataBoxes
+          years={this.fillInYearsArray(this.yearsRanges(this.indices()))}
+        />
       </div>
     </div>
     );
