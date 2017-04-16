@@ -1,10 +1,9 @@
-import React from 'react';
-import WaterLevel from './water-level.jsx'
-import PoliticalHistoryBox from './political-history-box.jsx'
-import WaterLevelContinuous from './water-level-continuous.jsx'
-import BirdCounts from './bird-counts.jsx'
-import library from '../data/years.jsx'
-import { Component } from 'react';
+import React, { Component } from 'react';
+import WaterLevel from './water-level.js'
+import WaterLevelContinuous from './water-level-continuous.js'
+import PoliticalHistoryBox from './political-history-box.js'
+import BirdCounts from './bird-counts.js'
+import library from '../data/years.js'
 
 class DataBoxes extends Component {
   levelsFor(years) {
