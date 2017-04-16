@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Control from './components/control'
-import './App.css';
+import './styles/index.css'
+import 'rc-slider/assets/index.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Control />
       </div>
     );

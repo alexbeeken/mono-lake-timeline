@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineMarkSeries, LineSeries } from 'react-vis';
 import colors from '../data/colors.js'
 
@@ -17,7 +17,7 @@ const months = [
   'Dec'
 ]
 
-const WaterLevel = React.createClass({
+class WaterLevel extends Component {
   data() {
     const lines = this.props.levels
     let output = []
@@ -25,7 +25,7 @@ const WaterLevel = React.createClass({
       output.push(this.buildLine(this.props.years[i], lines[i]))
     }
     return output
-  },
+  }
 
   buildLine(year, level) {
     let output = []
@@ -37,11 +37,11 @@ const WaterLevel = React.createClass({
       }
     }
     return output
-  },
+  }
 
   color(year) {
     return colors[year % 1941]
-  },
+  }
 
   buildLineSeries() {
     var output = []
@@ -67,11 +67,11 @@ const WaterLevel = React.createClass({
       }
     }
     return output
-  },
+  }
 
   tickFormatter(tick) {
     return months[tick]
-  },
+  }
 
   render() {
       return (
@@ -91,6 +91,6 @@ const WaterLevel = React.createClass({
         </div>
       );
   }
-});
+};
 
 export default WaterLevel;

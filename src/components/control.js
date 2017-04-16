@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Range } from 'rc-slider';
+import React, { Component } from 'react'
+import { Range } from 'rc-slider'
 import DataBoxes from './data-boxes.js'
 import library from '../data/years.js'
 
@@ -47,32 +47,32 @@ class Control extends Component {
 
   render() {
     return (
-    <div>
-      <div className='navbar navbar-default navbar-fixed-top'>
-        <div className='main-title'>
-          <h1>Mono Lake Timeline</h1>
+      <div>
+        <div className='navbar navbar-default navbar-fixed-top'>
+          <div className='main-title'>
+            <h1>Mono Lake Timeline</h1>
+          </div>
+          <div className='years-range'>
+            <h3>{this.formatYears(this.yearsRanges(this.indices()))}</h3>
+          </div>
+          <div className='slider'>
+            <Range
+              value={this.state.value}
+              onChange={this.onSliderChange}
+              onAfterChange={this.onAfterChange}
+              max={this.state.max}
+              min={this.state.min}
+              defaultValue={this.state.defaultValue}
+              allowCross={false}
+            />
+          </div>
         </div>
-        <div className='years-range'>
-          <h3>{this.formatYears(this.yearsRanges(this.indices()))}</h3>
-        </div>
-        <div className='slider'>
-          <Range
-            value={this.state.value}
-            onChange={this.onSliderChange}
-            onAfterChange={this.onAfterChange}
-            max={this.state.max}
-            min={this.state.min}
-            defaultValue={this.state.defaultValue}
-            allowCross={false}
+        <div className='data-boxes'>
+          <DataBoxes
+            years={this.fillInYearsArray(this.yearsRanges(this.indices()))}
           />
         </div>
       </div>
-      <div className='data-boxes'>
-        <DataBoxes
-          years={this.fillInYearsArray(this.yearsRanges(this.indices()))}
-        />
-      </div>
-    </div>
     );
   }
 };
