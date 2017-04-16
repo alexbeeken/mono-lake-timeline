@@ -1,12 +1,16 @@
-/*.rv-xy-plot {
+.rv-xy-plot {
   padding-left: 10px;
-  width: 690px;
-}*/
+  width: 100%;
+}
 
 .rv-xy-plot__inner {
-  width: 100%;
+  width: 110%;
   padding: 0 10px;
   font-size: 20px;
+}
+
+.rv-xy-plot__axis .rv-xy-plot__axis--vertical {
+  width: 10px;
 }
 
 .rc-slider-rail {

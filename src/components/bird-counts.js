@@ -58,7 +58,7 @@ class BirdCounts extends Component {
               <h4>Bird Counts</h4>
               <div className='birds'>
                 <XYPlot
-                  width={this.props.width}
+                  width={this.props.width - 30}
                   xDomain={[0, 2400]}
                   height={this.props.height}
                   onMouseEnter={this.active}
@@ -69,8 +69,8 @@ class BirdCounts extends Component {
                   <XAxis title='count'/>
                   <YAxis title='species'
                     tickFormat={this.tickFormatter}
-                    tickSizeOuter={1}
-                    tickTotal={32}
+                    tickSizeOuter={0.5}
+                    tickTotal={10}
                     tickLabelAngle={-45}/>
                 </XYPlot>
               </div>
