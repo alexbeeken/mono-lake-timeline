@@ -22,6 +22,10 @@
   min-height: 300px;
 }
 
+.rc-slider-dot {
+  visibility: hidden;
+}
+
 .data-box  h3 {
   text-align: center;
 }

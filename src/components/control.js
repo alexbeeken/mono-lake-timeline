@@ -46,6 +46,19 @@ class Control extends Component {
     return output
   }
 
+  slideMarks() {
+    let marks = {}
+    let years = this.fillInYearsArray(this.yearsRanges([0, 75]))
+    for (var i = 1; i <= years.length; i++) {
+      if (years[i] % 5 === 0) {
+        marks[i.toString()] = {
+          'label': years[i].toString(),
+        }
+      }
+    }
+    return marks
+  }
+
   render() {
     return (
       <div>
@@ -64,6 +77,7 @@ class Control extends Component {
               max={this.state.max}
               min={this.state.min}
               defaultValue={this.state.defaultValue}
+              marks={this.slideMarks()}
             />
           </div>
         </div>
