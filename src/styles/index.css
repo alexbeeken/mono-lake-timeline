@@ -18,6 +18,8 @@
   border: solid 1px #ccc;
   float: left;
   width: 50%;
+  min-width: 600px;
+  min-height: 300px;
 }
 
 .data-box  h3 {
