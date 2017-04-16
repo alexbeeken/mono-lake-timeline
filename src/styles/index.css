@@ -65,6 +65,10 @@
   height: 100%;
 }
 
+.history-entries {
+  padding-right: 15px;
+}
+
 .navbar-fixed-top h1 {
   width: 100%;
 }
