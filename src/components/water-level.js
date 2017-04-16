@@ -44,7 +44,7 @@ class WaterLevel extends Component {
   }
 
   buildLineSeries() {
-    var output = []
+    let output = []
     var lineData = this.data()
     for (var i = 0; i < lineData.length; i++) {
       if (lineData.length > 4) {

@@ -6,6 +6,14 @@
   font-size: 20px;
 }
 
+.rc-slider-rail {
+  background-color: blue;
+}
+
+.rc-slider-track {
+  background-color: red;
+}
+
 .data-box {
   border: solid 1px #ccc;
   float: left;

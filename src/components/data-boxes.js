@@ -8,7 +8,7 @@ import library from '../data/years.js'
 class DataBoxes extends Component {
   levelsFor(years) {
     var output = []
-    for (var i = 0; i <= (years[years.length - 1] - 1941); i++) {
+    for (var i = years[0] - 1941; i <= (years[years.length - 1] - 1941); i++) {
       output.push(library[i]['levels'])
     }
     return output
