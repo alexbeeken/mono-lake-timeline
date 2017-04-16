@@ -64,7 +64,6 @@ class Control extends Component {
               max={this.state.max}
               min={this.state.min}
               defaultValue={this.state.defaultValue}
-              allowCross={false}
             />
           </div>
         </div>
