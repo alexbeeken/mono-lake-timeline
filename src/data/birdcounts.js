@@ -1,6 +1,6 @@
 const birds1998 = [
   {
-    "SPECIES": "Snowy Plover",
+    "SPECIES": "Swy Plover",
     "COUNT": {
       "1998": 90,
       "1999": 22,
@@ -16,7 +16,7 @@ const birds1998 = [
     }
   },
   {
-    "SPECIES": "Semipalmated Plover",
+    "SPECIES": "Semip. Plover",
     "COUNT": {
       "1998": 119,
       "1999": 43,
@@ -40,7 +40,7 @@ const birds1998 = [
     }
   },
   {
-    "SPECIES": "Cinnamon Teal",
+    "SPECIES": "Cn Teal",
     "COUNT": {
       "1998": 292,
       "1999": 523,
@@ -48,7 +48,7 @@ const birds1998 = [
     }
   },
   {
-    "SPECIES": "Least Sandpiper",
+    "SPECIES": "Lst Sandpiper",
     "COUNT": {
       "1998": 319,
       "1999": 73,
@@ -56,7 +56,7 @@ const birds1998 = [
     }
   },
   {
-    "SPECIES": "Wilson's Phalarope",
+    "SPECIES": "W's Phalarope",
     "COUNT": {
       "1998": 327,
       "1999": 79,
@@ -64,7 +64,7 @@ const birds1998 = [
     }
   },
   {
-    "SPECIES": "Least/Wst Sandpiper",
+    "SPECIES": "Lst/Wst Sandpiper",
     "COUNT": {
       "1998": 1361,
       "1999": 906,
@@ -72,7 +72,7 @@ const birds1998 = [
     }
   },
   {
-    "SPECIES": "Western Sandpiper",
+    "SPECIES": "Wstn Sandpiper",
     "COUNT": {
       "1998": 2233,
       "1999": 36,
