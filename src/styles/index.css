@@ -1,10 +1,11 @@
-.rv-xy-plot {
+/*.rv-xy-plot {
   padding-left: 10px;
   width: 690px;
-}
+}*/
 
 .rv-xy-plot__inner {
-  padding-left: 20px;
+  width: 100%;
+  padding: 0 10px;
   font-size: 20px;
 }
 
@@ -20,7 +21,7 @@
   margin: 5px;
   border: solid 1px #ccc;
   float: left;
-  width: 50%;
+  width: 49%;
   min-width: 360px;
   min-height: 300px;
 }

@@ -18,9 +18,9 @@ class DataBoxes extends Component {
   responsiveWidth() {
     let width = this.props.containerWidth
     if (width > 720) {
-      return (width / 2) - 20
+      return (width / 2) - width/20
     } else {
-      return 360
+      return 340
     }
   }
 
