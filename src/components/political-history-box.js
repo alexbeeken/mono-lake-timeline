@@ -10,7 +10,7 @@ class PoliticalHistoryBox extends Component {
       var entry = politicalhistories[entries[i]]
       var parsedEntry = this.parseEntry(entry)
       output.push(
-        <li key={i}>
+        <li className='list-group-item'>
           <h4><strong>{parsedEntry['years']}</strong> {parsedEntry['label']}</h4>
           <p>{parsedEntry['body']}</p>
         </li>)
@@ -57,7 +57,7 @@ class PoliticalHistoryBox extends Component {
         <div className='data-box'>
           <h4>Political History</h4>
         <div className='history-entries'>
-          <ul>{this.formattedEntries()}</ul>
+          <ul className='list-group'>{this.formattedEntries()}</ul>
         </div>
         </div>
       )
