@@ -7,9 +7,25 @@ class PoliticalHistoryBox extends Component {
     var output = []
     var entries = this.entries()
     for (var i = 0; i < entries.length; i++) {
-      output.push(<li key={i}>{politicalhistories[entries[i]]}</li>)
+      var entry = politicalhistories[entries[i]]
+      var parsedEntry = this.parseEntry(entry)
+      output.push(
+        <li key={i}>
+          <h4><strong>{parsedEntry['years']}</strong> {parsedEntry['label']}</h4>
+          <p>{parsedEntry['body']}</p>
+        </li>)
     }
     return output
+  }
+
+  parseEntry(entry) {
+    const parser = /^(\d\d\d\d) - (.*?):(.*?)$/
+    var matches = parser.exec(entry)
+    return {
+      years: matches[1],
+      label: matches[2],
+      body: matches[3]
+    }
   }
 
   isUniqueValue(array, value) {
