@@ -19,7 +19,7 @@ class PoliticalHistoryBox extends Component {
   }
 
   parseEntry(entry) {
-    const parser = /^(\d\d\d\d) - (.*?):(.*?)$/
+    const parser = /^(.*?) - (.*?):(.*?)$/
     var matches = parser.exec(entry)
     return {
       years: matches[1],
