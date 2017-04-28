@@ -43,11 +43,11 @@ class DataBoxes extends Component {
   }
 
   lowLevel() {
-    return Math.min(...this.allLevels())
+    let array = this.allLevels().filter(Number)
+    return Math.min.apply( Math, array )
   }
 
   highLevel() {
-    console.log(Math.max(...this.allLevels()))
     return Math.max(...this.allLevels())
   }
 
