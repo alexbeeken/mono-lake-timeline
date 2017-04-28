@@ -3,10 +3,24 @@ import WaterLevel from './water-level.js'
 import WaterLevelContinuous from './water-level-continuous.js'
 import PoliticalHistoryBox from './political-history-box.js'
 import BirdCounts from './bird-counts.js'
+import Bathymetric from './bathymetric.js'
 import library from '../data/years.js'
 import Dimensions from 'react-dimensions'
 
 class DataBoxes extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      levels: this.levelsFor(props.years)
+    }
+  }
+
+  componentWillReceiveProps(props) {
+    this.setState((_prevState, props) => {
+      return {levels: this.levelsFor(props.years)}
+    })
+  }
+
   levelsFor(years) {
     var output = []
     for (var i = years[0] - 1941; i <= (years[years.length - 1] - 1941); i++) {
@@ -24,16 +38,29 @@ class DataBoxes extends Component {
     }
   }
 
+  allLevels() {
+    return [].concat.apply([], this.state.levels)
+  }
+
+  lowLevel() {
+    return Math.min(...this.allLevels())
+  }
+
+  highLevel() {
+    console.log(Math.max(...this.allLevels()))
+    return Math.max(...this.allLevels())
+  }
+
   render() {
     return (
       <div className='data-boxes container'>
         <WaterLevel
-          levels={this.levelsFor(this.props.years)}
+          levels={this.state.levels}
           years={this.props.years}
           width={this.responsiveWidth()}
           height={300}/>
         <WaterLevelContinuous
-          levels={this.levelsFor(this.props.years)}
+          levels={this.state.levels}
           years={this.props.years}
           width={this.responsiveWidth()}
           height={300}/>
@@ -45,8 +72,12 @@ class DataBoxes extends Component {
           years={this.props.years}
           width={this.responsiveWidth()}
           height={300}/>
+        <Bathymetric
+          lowLevel={this.lowLevel()}
+          highLevel={this.highLevel()}
+          width={this.responsiveWidth()}/>
       </div>
-    );
+    )
   }
 };
 

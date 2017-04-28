@@ -18,7 +18,7 @@ const partialYears = [
 
 class WaterLevelContinuous extends Component {
   data() {
-    const lines = this.props.levels
+    let lines = this.props.levels
     let output = []
     let years = this.props.years
     for (var i = 0; i < years.length; i++) {
