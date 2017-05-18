@@ -66,6 +66,7 @@ class Bathymetric extends Component {
         )
       }
     }
+    return null
   }
 }
 
